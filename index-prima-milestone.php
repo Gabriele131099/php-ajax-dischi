@@ -39,8 +39,8 @@ $album="<div class='container'>";
 foreach($database as $item =>$disco) {
     $album .= "<div class='album'><img class='poster' src='{$disco['poster']}'>";
     $album .= "<h2 class='title'>{$disco['title']}</h2>";
-    $album .= "<div>{$disco['author']}</div>";
-    $album .= "<div>{$disco['year']}</div></div>";
+    $album .= "<div class='sub-title'><div>{$disco['author']}</div>";
+    $album .= "<div>{$disco['year']}</div></div></div>";
     // disc['title']
 }
 $album .= "</div>";

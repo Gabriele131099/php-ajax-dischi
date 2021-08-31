@@ -40,8 +40,18 @@ Attraverso un’altra chiamata api, filtrare gli album per genere
 <body>
 
     <div id="app">
-        <div v-for="disc in discs">
-            {{disc}}
+        <div class='container'>
+            <div class='album' v-for="disc in discs">
+                
+                    <img class='poster' :src=disc.poster alt="">
+                    <h2 class="title">{{disc.title}}</h2>
+                   <div class="sub-title">
+                        {{disc.author}}
+                        {{disc.year}}
+
+                
+
+            </div>
         </div>
     
     </div>
