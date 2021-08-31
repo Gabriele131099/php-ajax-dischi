@@ -31,16 +31,12 @@ Attraverso un’altra chiamata api, filtrare gli album per genere
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 <body>
-<nav class="nav">
-            <div>
-     
 
-</nav>
 <?php 
 
 require_once __DIR__ . "/database/database.php";
 
-$select='';
+$select="<nav class='navbar'>";
 $select.="<form action='index-prima-milestone.php' method='POST'> ";
 $select.="<select name='music' id='music'>";
 
@@ -49,7 +45,7 @@ foreach ($genres as $key) {
 }
 $select.="</select>";
 $select.="<input type='submit' name='submit' value='cerca un genere'/>";
-$select.="</form>";
+$select.="</form></nav>";
 echo $select;
 $genre=$_POST['music'];
 $filterGenre = function($item) use ($genre) {
