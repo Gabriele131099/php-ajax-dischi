@@ -44,3 +44,14 @@ $database = [
         'genre' => 'rap'
     ]
 ];
+
+$genres = [
+    
+    '',
+    'pop',
+    'rap',
+    'rock',
+    'hip-hop',
+    'trap'
+    
+];
