@@ -1,22 +1,39 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+}
+.nav
+{
+    background-color: rgb(56, 58, 80);
+    padding: 20px;
+}
 .container{
     display: flex;
     align-items: stretch;
-    justify-content: center;
-    background-color: rgb(156, 157, 211);
+    justify-content: space-around;
+    background-color: rgb(35, 35, 37);
     text-align: center;
     flex-wrap: wrap;
-
+}
+.title{
+    padding: 15px;
 }
 .sub-title{
     color: lightgray;
+    padding: 30px 20px;
 }
 .album{
-    padding: 30px;
     background-color: rgb(56, 58, 80);
     margin: 30px;
+    padding: 20px 10px;
     width: 300px;
     color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
 .poster{
-    width: 200px;
+    width: 250px;
 }

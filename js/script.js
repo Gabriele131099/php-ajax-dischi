@@ -12,6 +12,11 @@ new Vue(
                 .then((response) => {
                     this.discs = response.data;
                    
+            })   ,
+            axios.get('http://localhost/php-ajax-dischi/backend/api.php')
+                .then((response) => {
+                    this.discs = response.data;
+                   
             })   
 
         }

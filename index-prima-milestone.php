@@ -31,8 +31,29 @@ Attraverso un’altra chiamata api, filtrare gli album per genere
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 <body>
+<nav class="nav">
+            <div>
+                <select name="music" id="genre">
+                    <option value="all">All</option>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
+                </select>
+            </div>
 
+
+</nav>
 <?php 
+
+$liceoType = 'pop';
+
+$result = array_filter($database, function($item) use ($liceoType) {
+    // ritorna true solo se vogliamo che l'item passi all'array finale ($result)
+    return $item["genre"] === $liceoType;
+});
+
+echo $result;
 
 require_once __DIR__ . "/database/database.php";
 $album="<div class='container'>";
@@ -40,7 +61,7 @@ foreach($database as $item =>$disco) {
     $album .= "<div class='album'><img class='poster' src='{$disco['poster']}'>";
     $album .= "<h2 class='title'>{$disco['title']}</h2>";
     $album .= "<div class='sub-title'><div>{$disco['author']}</div>";
-    $album .= "<div>{$disco['year']}</div></div></div>";
+    $album .= "<div>{$disco['year']},{$disco['genre']}</div></div></div>";
     // disc['title']
 }
 $album .= "</div>";
